@@ -3,7 +3,7 @@
 const galleryData = {
     "hot-ridhi": {
       description: "These are the original pictures.",
-      images: ["1.png", "2.JPEG", "3.jpg","4.JPG", "5.jpg", "6.jpg" ] // Type the exact filenames of the images you put in the folder
+      images: ["1.png", "2.jpg", "3.jpg","4.JPG", "5.jpg", "6.jpg" ] // Type the exact filenames of the images you put in the folder
     },
     "cool-ridhi": {
       description: "cool girl.",
