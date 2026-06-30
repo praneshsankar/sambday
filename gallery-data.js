@@ -3,11 +3,11 @@
 const galleryData = {
     "hot-ridhi": {
       description: "These are the original pictures.",
-      images: ["1.png", "2.jpg", "3.jpg","4.JPG", "5.jpg", "6.jpg" ] // Type the exact filenames of the images you put in the folder
+      images: ["1.png", "2.jpg", "3.jpg","4.jpg", "5.jpg", "6.jpg" ] // Type the exact filenames of the images you put in the folder
     },
     "cool-ridhi": {
       description: "cool girl.",
-      images: ["1.jpg", "2.jpg", "3.jpg","4.JPG"] // Example: These would live in site/assets/galleries/vacation/
+      images: ["1.jpg", "2.jpg", "3.jpg","4.jpg"] // Example: These would live in site/assets/galleries/vacation/
     },
     "cute-ridhi": {
       description: "cool girl.",
