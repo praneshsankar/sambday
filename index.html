@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Choose your profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <main class="profiles">
+      <p class="profiles__heading">Choose your profile</p>
+
+      <div class="profiles__grid">
+        <button type="button" class="profile-card">
+          <span class="avatar avatar--blue">
+            <svg class="avatar__smiley" viewBox="0 0 100 100" aria-hidden="true">
+              <circle cx="35" cy="38" r="6" fill="#fff"/>
+              <circle cx="65" cy="38" r="6" fill="#fff"/>
+              <path d="M30 58 Q50 72 70 58" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+            </svg>
+            <span class="avatar__lock" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14">
+                <path d="M12 1a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V6a5 5 0 0 0-5-5zm-3 8V6a3 3 0 1 1 6 0v3H9z"/>
+              </svg>
+            </span>
+          </span>
+          <span class="profile-card__name">Sam</span>
+        </button>
+
+        <button type="button" class="profile-card">
+          <span class="avatar avatar--pranesh">
+            <svg class="avatar__boss" viewBox="0 0 100 100" aria-hidden="true">
+              <rect width="100" height="100" fill="#87CEEB"/>
+              <ellipse cx="50" cy="38" rx="22" ry="24" fill="#f5d0b5"/>
+              <ellipse cx="50" cy="42" rx="18" ry="16" fill="#f8dcc8"/>
+              <circle cx="42" cy="36" r="3" fill="#333"/>
+              <circle cx="58" cy="36" r="3" fill="#333"/>
+              <path d="M44 44 Q50 48 56 44" fill="none" stroke="#333" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M28 55 Q50 48 72 55 L72 100 L28 100 Z" fill="#1a1a2e"/>
+              <path d="M38 55 L50 62 L62 55 L62 78 L38 78 Z" fill="#fff"/>
+              <path d="M45 55 L55 55 L52 72 L48 72 Z" fill="#c0392b"/>
+            </svg>
+          </span>
+          <span class="profile-card__name">Chammu</span>
+        </button>
+
+        <button type="button" class="profile-card">
+          <span class="avatar avatar--vithu">
+            <span class="avatar__fuzzy-face" aria-hidden="true"></span>
+          </span>
+          <span class="profile-card__name">Samridhi</span>
+        </button>
+      </div>
+    </main>
+  </div>
+
+  <div class="login-modal" id="loginModal" hidden>
+    <div class="login-modal__backdrop" data-close-modal></div>
+    <div class="login-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+      <h2 class="login-modal__title" id="loginTitle">Log In</h2>
+      <form class="login-modal__form" id="loginForm">
+        <label class="login-modal__field">
+          <span class="login-modal__label">username</span>
+          <input type="text" name="username" id="username" autocomplete="username" required>
+        </label>
+        <label class="login-modal__field">
+          <span class="login-modal__label">password</span>
+          <input type="password" name="password" id="password" autocomplete="current-password" required>
+        </label>
+        <p class="login-modal__hint">hint: battle grounds account</p>
+        <p class="login-modal__error" id="loginError" hidden>Incorrect username or password.</p>
+        <button type="submit" class="login-modal__submit">Log In</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>

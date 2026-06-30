@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Homepage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="homepage-body">
+  <div class="page page--homepage">
+    <main class="homepage">
+      <header class="homepage__header">
+        <h1 class="homepage__title">Welcome back</h1>
+        <p class="homepage__subtitle">You're logged in.</p>
+      </header>
+
+      <section class="posters" aria-label="Posters">
+        <div class="posters__frame">
+          <img class="posters__image posters__image--active" src="assets/posters/poster-1.png" alt="">
+          <img class="posters__image" src="assets/posters/poster-2.png" alt="">
+          <img class="posters__image" src="assets/posters/poster-3.png" alt="">
+          <img class="posters__image" src="assets/posters/poster-4.png" alt="">
+          <img class="posters__image" src="assets/posters/poster-5.png" alt="">
+        </div>
+      </section>
+
+      <div class="gallery">
+        <div id="gallerySections" class="gallery-sections"></div>
+      </div>
+
+      <footer class="homepage__footer">
+        <a class="homepage__link" href="index.html">Switch profile</a>
+      </footer>
+    </main>
+  </div>
+
+  <script src="gallery-data.js"></script>
+  <script src="posters.js"></script>
+  <script src="hot-ridhi.js"></script>
+</body>
+</html>
