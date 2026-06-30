@@ -31,6 +31,17 @@
         <div id="gallerySections" class="gallery-sections"></div>
       </div>
 
+      <section class="birthday" aria-label="Birthday Wishes">
+        <div class="birthday__poppers">
+          <span class="birthday__emoji birthday__emoji--left">🎉</span>
+          <h2 class="birthday__text">HAPPY BIRTHDAY SAM</h2>
+          <span class="birthday__emoji birthday__emoji--right">🎉</span>
+        </div>
+        <div class="birthday__cake">
+          <span class="birthday__emoji birthday__emoji--cake">🎂</span>
+        </div>
+      </section>
+
       <footer class="homepage__footer">
         <a class="homepage__link" href="index.html">Switch profile</a>
       </footer>
@@ -40,5 +51,49 @@
   <script src="gallery-data.js"></script>
   <script src="posters.js"></script>
   <script src="hot-ridhi.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    const birthdaySection = document.querySelector('.birthday');
+    
+    // Trigger confetti when the birthday section scrolls into view
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          
+          const duration = 3000;
+          const end = Date.now() + duration;
+
+          // Fire confetti from both sides of the screen
+          (function frame() {
+            confetti({
+              particleCount: 5,
+              angle: 60,
+              spread: 55,
+              origin: { x: 0 },
+              colors: ['#ff6b6b', '#feca57', '#48dbfb', '#ff9ff3', '#ffffff']
+            });
+            confetti({
+              particleCount: 5,
+              angle: 120,
+              spread: 55,
+              origin: { x: 1 },
+              colors: ['#ff6b6b', '#feca57', '#48dbfb', '#ff9ff3', '#ffffff']
+            });
+
+            if (Date.now() < end) {
+              requestAnimationFrame(frame);
+            }
+          }());
+          
+          // Stop observing so it only fires once per visit
+          observer.unobserve(birthdaySection);
+        }
+      });
+    }, { threshold: 0.5 }); // Triggers when 50% of the section is visible
+
+    observer.observe(birthdaySection);
+  </script>
+
 </body>
 </html>

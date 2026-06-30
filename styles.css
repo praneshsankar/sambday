@@ -715,3 +715,83 @@ body.homepage-body {
 .homepage__link:hover {
   color: #b3b3b3;
 }
+
+
+.birthday {
+  width: 100%;
+  max-width: 360px;
+  margin: 3rem auto 2rem;
+  text-align: center;
+  padding: 2.5rem 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.birthday__poppers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.birthday__text {
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-transform: uppercase;
+  background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShine 4s ease infinite;
+  text-shadow: 0 4px 16px rgba(255, 107, 107, 0.2);
+}
+
+.birthday__emoji {
+  font-size: 2.5rem;
+  display: inline-block;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.4));
+}
+
+.birthday__emoji--left {
+  animation: popLeft 2s infinite ease-in-out;
+}
+
+.birthday__emoji--right {
+  animation: popRight 2s infinite ease-in-out 1s; /* Delayed 1s to alternate */
+}
+
+.birthday__emoji--cake {
+  font-size: 5.5rem;
+  animation: floatCake 4s ease-in-out infinite;
+  display: inline-block;
+}
+
+/* Animations */
+@keyframes popLeft {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes popRight {
+  0%, 100% { transform: scaleX(-1) translateY(0); } /* Keeps the right popper flipped */
+  50% { transform: scaleX(-1) translateY(-10px); }
+}
+
+@keyframes floatCake {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-8px) rotate(-3deg); }
+  75% { transform: translateY(-8px) rotate(3deg); }
+}
+
+@keyframes textShine {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
